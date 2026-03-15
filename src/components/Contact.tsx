@@ -13,27 +13,23 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="relative w-full py-24 pb-40 px-4">
-      <div className="max-w-5xl mx-auto bg-white/[0.02] border border-white/[0.06] rounded-[3rem] p-8 md:p-16 backdrop-blur-2xl relative overflow-hidden shadow-2xl">
-         {/* Internal Glow Effects */}
-         <div className="absolute -top-20 -right-20 w-80 h-80 bg-fuchsia-600/10 rounded-full blur-[80px]" />
-         <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-indigo-600/10 rounded-full blur-[80px]" />
-         
+    <section id="contact" className="relative w-full py-24 pb-40 px-4 bg-white dark:bg-black transition-colors duration-500">
+      <div className="max-w-5xl mx-auto rounded-3xl p-8 md:p-16 border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 transition-all duration-300">
          <div className="text-center mb-16 relative z-10">
            <motion.div 
              initial={{ scale: 0, rotate: -45 }} 
              whileInView={{ scale: 1, rotate: 0 }} 
              transition={{ type: "spring", stiffness: 60 }}
              viewport={{ once: true }}
-             className="w-20 h-20 bg-gradient-to-tr from-fuchsia-600 to-indigo-600 rounded-3xl flex items-center justify-center mx-auto mb-8 text-white shadow-2xl"
+             className="w-20 h-20 bg-black dark:bg-white text-white dark:text-black rounded-full flex items-center justify-center mx-auto mb-8 shadow-2xl"
            >
              <Send className="w-8 h-8 -rotate-12" />
            </motion.div>
-           <h2 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight">
-             Let&apos;s Build Together.
+           <h2 className="text-4xl md:text-6xl font-black text-black dark:text-white mb-6 uppercase tracking-tighter" style={{ fontFamily: "'Fira Code', monospace" }}>
+             LET'S TALK
            </h2>
-           <p className="text-gray-400 text-lg md:text-xl font-light max-w-xl mx-auto">
-             I&apos;m currently open for new opportunities. Whether you have a question or just want to engineer something cool â€” my inbox is open.
+           <p className="text-neutral-600 dark:text-neutral-400 text-lg md:text-xl font-light max-w-xl mx-auto" style={{ fontFamily: "'Antic', sans-serif" }}>
+             Currently open for new opportunities. Whether you have a question or just want to engineer something cool — my inbox is open.
            </p>
          </div>
 
@@ -49,14 +45,14 @@ export default function Contact() {
                <Link 
                  href={link.href} 
                  target="_blank" 
-                 className="group flex items-center gap-5 p-5 md:p-6 rounded-[2rem] bg-black/40 border border-white/5 hover:border-fuchsia-500/40 transition-all duration-300 hover:shadow-[0_0_30px_rgba(217,70,239,0.1)]"
+                 className="group flex items-center gap-5 p-5 md:p-6 rounded-2xl bg-white dark:bg-black border border-neutral-200 dark:border-neutral-800 hover:border-[#C3E41D] dark:hover:border-[#C3E41D] transition-all duration-300"
                >
-                 <div className="w-14 h-14 rounded-2xl bg-white/[0.04] border border-white/5 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 group-hover:bg-fuchsia-500/20 group-hover:text-fuchsia-300 group-hover:border-fuchsia-500/30">
+                 <div className="w-14 h-14 rounded-full bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 group-hover:text-[#C3E41D] dark:group-hover:text-[#C3E41D]">
                    {link.icon}
                  </div>
-                 <div className="flex-1 overflow-hidden">
-                   <div className="text-gray-500 text-xs font-bold uppercase tracking-[0.2em] mb-1.5">{link.name}</div>
-                   <div className="text-gray-200 text-lg font-medium truncate group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-fuchsia-300 group-hover:to-indigo-300 transition-colors">
+                 <div className="flex-1 overflow-hidden" style={{ fontFamily: "'Antic', sans-serif" }}>
+                   <div className="text-neutral-500 dark:text-neutral-400 text-xs font-bold uppercase tracking-[0.2em] mb-1.5">{link.name}</div>
+                   <div className="text-black dark:text-white text-lg font-bold truncate group-hover:text-[#C3E41D] dark:group-hover:text-[#C3E41D] transition-colors">
                      {link.text}
                    </div>
                  </div>
@@ -68,3 +64,4 @@ export default function Contact() {
     </section>
   );
 }
+

@@ -140,7 +140,7 @@ export default function Component() {
       }}
     >
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 px-6 py-6">
+      <header className="fixed top-0 left-0 right-0 z-50 px-6 py-6 transition-all duration-300 backdrop-blur-md bg-transparent border-b border-neutral-200/20 dark:border-neutral-800/20">
         <nav className="flex items-center justify-between max-w-screen-2xl mx-auto">
           {/* Menu Button */}
           <div className="relative">
@@ -190,7 +190,7 @@ export default function Component() {
           </div>
 
           {/* Signature */}
-          <div className="text-4xl" style={{ color: isDark ? "hsl(0 0% 100%)" : "hsl(0 0% 10%)", fontFamily: "'Brush Script MT', 'Lucida Handwriting', cursive" }}>
+          <div className="text-4xl hover:scale-110 transition-transform cursor-pointer" style={{ color: isDark ? "hsl(0 0% 100%)" : "hsl(0 0% 10%)", fontFamily: "'Brush Script MT', 'Lucida Handwriting', cursive" }}>
             YT.
           </div>
 

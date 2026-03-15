@@ -1,17 +1,17 @@
-"use client";
-
-import { motion } from "framer-motion";
-
-export default function Footer() {
+﻿export default function Footer() {
   return (
-    <motion.footer 
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
-      className="w-full py-8 text-center text-gray-500 text-sm border-t border-purple-500/10"
-    >
-      <p>© 2026 Yug Thummar</p>
-    </motion.footer>
-  );
+    <footer className="w-full bg-white dark:bg-black text-black dark:text-white py-8 border-t border-neutral-200 dark:border-neutral-800 transition-colors duration-500 font-sans">
+      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+        <div className="flex items-center space-x-2 mb-4 md:mb-0">
+          <span className="text-xl font-bold tracking-tighter" style={{ fontFamily: "'Antic', sans-serif" }}>Yash Thummar</span>
+          <span className="text-[#C3E41D]">© {new Date().getFullYear()}</span>
+        </div>
+        <div className="flex space-x-6 text-sm" style={{ fontFamily: "'Fira Code', monospace" }}>
+          <a href="#" className="hover:text-[#C3E41D] transition-colors">GitHub</a>
+          <a href="#" className="hover:text-[#C3E41D] transition-colors">LinkedIn</a>
+          <a href="#" className="hover:text-[#C3E41D] transition-colors">Twitter</a>
+        </div>
+      </div>
+    </footer>
+  )
 }

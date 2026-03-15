@@ -8,34 +8,26 @@ export default function Experience() {
     {
       title: "AI Developer",
       desc: "Architecting intelligent agents and neural networks to solve complex problems and automate workflows.",
-      icon: <Brain className="w-8 h-8 text-fuchsia-400" />,
-      colorHover: "group-hover:border-fuchsia-500/50 group-hover:shadow-[0_0_40px_rgba(217,70,239,0.15)]",
-      bgHover: "group-hover:bg-fuchsia-500/10"
+      icon: <Brain className="w-8 h-8 text-[#C3E41D]" />,
     },
     {
       title: "Machine Learning Engineer",
       desc: "Deploying scalable ML pipelines, predictive models, and optimizing algorithms for edge and cloud.",
-      icon: <Cpu className="w-8 h-8 text-indigo-400" />,
-      colorHover: "group-hover:border-indigo-500/50 group-hover:shadow-[0_0_40px_rgba(99,102,241,0.15)]",
-      bgHover: "group-hover:bg-indigo-500/10"
+      icon: <Cpu className="w-8 h-8 text-[#C3E41D]" />,
     },
     {
       title: "Full Stack AI Builder",
       desc: "Bridging the gap between cutting-edge AI logic and seamless, intuitive user interactions.",
-      icon: <Blocks className="w-8 h-8 text-cyan-400" />,
-      colorHover: "group-hover:border-cyan-500/50 group-hover:shadow-[0_0_40px_rgba(34,211,238,0.15)]",
-      bgHover: "group-hover:bg-cyan-500/10"
+      icon: <Blocks className="w-8 h-8 text-[#C3E41D]" />,
     },
   ];
 
   return (
-    <section id="experience" className="relative w-full py-24">
-      <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-indigo-900/10 rounded-full blur-[120px] pointer-events-none -translate-x-1/2 -translate-y-1/2" />
-      
+    <section id="experience" className="relative w-full py-16 md:py-24 bg-white dark:bg-black transition-colors duration-500 font-sans">
       <div className="text-center mb-20 px-4">
-        <h3 className="text-sm font-black text-fuchsia-500 tracking-[0.2em] uppercase mb-4">My Journey</h3>
-        <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
-          Work Experience
+        <h3 className="text-sm font-bold text-[#C3E41D] tracking-[0.2em] uppercase mb-4" style={{ fontFamily: "'Fira Code', monospace" }}>01. Experience</h3>
+        <h2 className="text-4xl md:text-5xl font-black text-black dark:text-white tracking-tighter" style={{ fontFamily: "'Antic', sans-serif" }}>
+          Work Journey
         </h2>
       </div>
 
@@ -47,16 +39,17 @@ export default function Experience() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7, delay: index * 0.15, type: "spring", stiffness: 50 }}
-            className={`group relative flex flex-col p-8 rounded-[2rem] bg-white/[0.03] backdrop-blur-xl border border-white/[0.08] transition-all duration-500 hover:-translate-y-2 ${exp.colorHover}`}
+            className="group relative flex flex-col p-8 rounded-2xl bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 transition-all duration-300 hover:-translate-y-2 hover:border-[#C3E41D] dark:hover:border-[#C3E41D]"
           >
-            <div className={`w-16 h-16 rounded-2xl bg-white/[0.05] border border-white/10 flex items-center justify-center mb-8 transition-colors duration-500 ${exp.bgHover}`}>
+            <div className="w-16 h-16 rounded-xl bg-white dark:bg-black border border-neutral-200 dark:border-neutral-800 flex items-center justify-center mb-8 transition-colors duration-300 group-hover:border-[#C3E41D] dark:group-hover:border-[#C3E41D]">
               {exp.icon}
             </div>
-            <h4 className="text-2xl font-bold mb-4 text-gray-100 tracking-tight">{exp.title}</h4>
-            <p className="text-gray-400 text-base leading-relaxed">{exp.desc}</p>
+            <h4 className="text-2xl font-bold mb-4 text-black dark:text-white tracking-tight" style={{ fontFamily: "'Antic', sans-serif" }}>{exp.title}</h4>
+            <p className="text-neutral-600 dark:text-neutral-400 text-base leading-relaxed">{exp.desc}</p>
           </motion.div>
         ))}
       </div>
     </section>
   );
 }
+

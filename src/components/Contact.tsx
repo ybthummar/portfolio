@@ -29,7 +29,7 @@ export default function Contact() {
              LET'S TALK
            </h2>
            <p className="text-neutral-600 dark:text-neutral-400 text-lg md:text-xl font-light max-w-xl mx-auto" style={{ fontFamily: "'Antic', sans-serif" }}>
-             Currently open for new opportunities. Whether you have a question or just want to engineer something cool — my inbox is open.
+             Currently open for new opportunities. Whether you have a question or just want to engineer something cool - my inbox is open.
            </p>
          </div>
 
